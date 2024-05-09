@@ -1,12 +1,17 @@
 import React from "react";
 import TodoItem from "./TodoItem";
-const TodoList = () => {
+const TodoList = ({ Todos }) => {
+    const Elements = Todos.map((item) => {
+        return ( <
+            li >
+            <
+            TodoItem {...item }
+            /> <
+            /li>
+        )
+    })
     return ( <
-        ul >
-        <
-        li > < TodoItem label = "How to create react app?" / > < /li>  <
-        li > < TodoItem label = "How to build react app?"
-        important / > < /li>  <
+        ul > { Elements } <
         /ul>
     );
 }

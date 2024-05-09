@@ -4,6 +4,12 @@ import AppHeader from './components/AppHeader';
 import TodoList from './components/TodoList';
 import SearchPanel from './components/SearchPanel';
 
+const TodoData = [
+    { label: 'How to create react app?', important: false },
+    { label: 'I bought Apple Watch', important: true },
+    { label: 'I broken my Apple Watch', important: true },
+]
+
 const App = () => {
     return ( <
         div >
@@ -12,8 +18,8 @@ const App = () => {
         <
         SearchPanel / >
         <
-        TodoList / >
-        <
+        TodoList Todos = { TodoData }
+        /> <
         /div>
 
     )

@@ -5,7 +5,7 @@ const TodoItem = ({ label, important }) => {
         color: important ? 'Tomato' : 'Black'
     }
     return ( <
-        span style = { style } > { label } < /span>
+        span style = { style } > < li > { label } < /li> </span >
     );
 }
 export default TodoItem
