@@ -3,11 +3,12 @@ import React from 'react';
 import AppHeader from './components/AppHeader';
 import TodoList from './components/TodoList';
 import SearchPanel from './components/SearchPanel';
+import ItemStatusFilter from './components/Item-Status-Filter';
 
 const TodoData = [
-    { label: 'How to create react app?', important: false },
-    { label: 'I bought Apple Watch', important: true },
-    { label: 'I broken my Apple Watch', important: true },
+    { label: 'How to create react app?', important: false, id: 124 },
+    { label: 'I bought Apple Watch', important: true, id: 145 },
+    { label: 'I broken my Apple Watch', important: true, id: 456 },
 ]
 
 const App = () => {
@@ -15,6 +16,8 @@ const App = () => {
         div >
         <
         AppHeader / >
+        <
+        ItemStatusFilter / >
         <
         SearchPanel / >
         <

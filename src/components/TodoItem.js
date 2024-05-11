@@ -1,11 +1,49 @@
 import React from "react";
+import '../style/TodoItem.css'
+import '../style/TodoItem.css'
 
-const TodoItem = ({ label, important }) => {
-    const style = {
-        color: important ? 'Tomato' : 'Black'
+const TodoListItem = ({
+    important,
+    done,
+    label,
+    onToggleImportant,
+    onToggleDone,
+    onDelete
+}) => {
+
+    let classNames = 'todo-list-item';
+    if (important) {
+        classNames += ' important';
     }
+
+    if (done) {
+        classNames += ' done';
+    }
+
+
     return ( <
-        span style = { style } > < li > { label } < /li> </span >
+        span className = { classNames } >
+        <
+        span className = "todo-list-item-label"
+        onClick = { onToggleDone } > { label } < /span>
+
+        <
+        button type = "button"
+        className = "btn btn-outline-success btn-sm float-right"
+        onClick = { onToggleImportant } >
+        <
+        i className = "fa fa-exclamation" > < /i> <
+        /button>
+
+        <
+        button type = "button"
+        className = "btn btn-outline-danger btn-sm float-right"
+        onClick = { onDelete } >
+        <
+        i className = "fa fa-trash-o" > < /i> <
+        /button> <
+        /span>
     );
-}
-export default TodoItem
+};
+
+export default TodoListItem;
