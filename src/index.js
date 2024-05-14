@@ -1,5 +1,6 @@
 import ReactDOM from 'react-dom/client';
 import React from 'react';
+<<<<<<< Updated upstream
 import AppHeader from './components/AppHeader';
 import TodoList from './components/TodoList';
 import SearchPanel from './components/SearchPanel';
@@ -24,6 +25,9 @@ const App = () => {
 
     )
 }
+=======
+>>>>>>> Stashed changes
 
+import App from './components/App';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render( < App / > );
